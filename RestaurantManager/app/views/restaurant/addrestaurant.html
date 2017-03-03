@@ -1,0 +1,25 @@
+﻿<restaurant-navbar></restaurant-navbar>
+
+<h3>Cadastro de Restaurante</h3>
+
+<fieldset>
+    <legend>Dados:</legend>
+    <form name="AddRestaurantForm" ng-submit="restaurantService.addRestaurant();">
+        <table class="table">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" ng-model="restaurant.Name" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" value="Salvar">Salvar</button>
+                </td>
+                <td>
+                    <button type="reset" value="Reset" ng-click="goRestaurantList()">Cancelar</button>
+                </td>
+            </tr>
+        </table>
+
+        
+    </form>
+</fieldset>

@@ -1,0 +1,28 @@
+﻿<restaurant-navbar></restaurant-navbar>
+
+<h3>Pratos</h3>
+
+<button type="button"
+        ng-click="goAddDish()">Cadastrar novo Prato</button>
+
+<div class="panel-heading"></div>
+<div class="panel-body">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Preço</th>
+            <th>Restaurante</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="dish in dishes">
+            <td>{{dish.Id}}</td>
+            <td>{{dish.Name}}</td>
+            <td>{{dish.Price}}</td>
+            <td>{{dish.RestaurantId}}</td>
+            <td><a href="#/EditDish/{{dish.Id}}">Editar</a></td>
+            <td><a href="#" ng-click="dishService.deleteDish(dish.Id)">Deletar</a></td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,39 @@
+﻿<restaurant-navbar></restaurant-navbar>
+
+<div class="panel panel-default">
+    <div>
+        <fieldset class="form-group">
+            <legend>Filtros:</legend>
+            Nome: <br />
+            <input ng-model="restaurantFilter.name" type="text"><br />
+
+            <button type="button"
+                    ng-click="restaurantService.filterRestaurantsByName(restaurantFilter.name)">
+                Pesquisar
+            </button>
+            <button type="button"
+                    ng-click="goAddRestaurant()">
+                Cadastrar novo Restaurante
+            </button>
+        </fieldset>
+    </div>
+
+    <div class="panel-heading">Restaurantes</div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="restaurant in restaurants">
+                <td>{{restaurant.Id}}</td>
+                <td>{{restaurant.Name}}</td>
+                <td><a href="#/EditRestaurant/{{restaurant.Id}}">Editar</a></td>
+                <td><a href="#" ng-click="restaurantService.deleteRestaurant(restaurant.Id)">Deletar</a></td>
+            </tr>
+        </table>
+    </div>
+
+    
