@@ -1,2 +1,2 @@
 # restaurant-manager
-Restaurant Manager using Asp.NET MCV + Angular + ET Code First
+Restaurant Manager with Asp.NET MCV + Angular + ET Code First
